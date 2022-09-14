@@ -15,6 +15,7 @@
         var peer = null;
         var peerCollection = {};
         var at = null;
+        var muted = false;
 
         function Init(MyID) {
             navigator.mediaDevices.getUserMedia({
@@ -52,8 +53,9 @@
             call.on("stream", (stream) => {
                 video.srcObject = stream;
                 //video.src = window.URL.createObjectURL(stream);
-                video.muted = false;
-                video.controls = true
+                video.muted = true;
+                if (muted)
+                    video.volume = 0;
                 video.play();
             });
             call.on("close", function() {
@@ -73,9 +75,33 @@
             }
         }
 
-        function Mute() {};
+        function Mute() {
+            at.enabled = false;
+        };
 
-        function Unmute() {};
+        function Unmute() {
+            at.enabled = true;
+        };
+
+        function MuteAll() {
+            muted = true;
+            for (var key in peerCollection) {
+                if (value != null) {
+                    var value = peerCollection[key];
+                    value.video.volume = 0;
+                }
+            }
+        }
+
+        function UnmuteAll() {
+            muted = false;
+            for (var key in peerCollection) {
+                if (value != null) {
+                    var value = peerCollection[key];
+                    value.video.volume = 1;
+                }
+            }
+        }
 
         window.onbeforeunload += function() {
             for (var key in peerCollection) {

@@ -1,0 +1,2582 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Etrainplatform 3D Conference</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+</head>
+
+<body>
+    <div id="unity-container" class="unity-desktop">
+        <canvas id="unity-canvas" width=1280 height=720 tabindex="0"></canvas>
+        <div id="unity-loading-bar">
+            <div id="unity-logo"></div>
+            <div id="unity-progress-bar-empty">
+                <div id="unity-progress-bar-full"></div>
+            </div>
+        </div>
+        <div id="unity-warning"> </div>
+        <div id="unity-footer">
+            <div id="unity-webgl-logo"></div>
+            <div id="unity-fullscreen-button"></div>
+            <div id="unity-build-title">Etrainplatform 3D Conference</div>
+        </div>
+    </div>
+    <script>
+        function roomButtonClick() {};
+
+        function ZoomButtonClick() {};
+        localStorage.setItem("dynamicAPI_data", JSON.stringify({
+            "data": {
+                "reception": [{
+                    "id": 4926,
+                    "conference_id": 83,
+                    "title": "1661360640NextNeatThumbnail1.png",
+                    "position": "social_link_1",
+                    "type": "social_link",
+                    "room_id": 683,
+                    "social_link": "https://nextandneat.com/",
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1661360640NextNeatThumbnail1.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4927,
+                    "conference_id": 83,
+                    "title": "1661356827californiaThumbnail.png",
+                    "position": "social_link_2",
+                    "type": "social_link",
+                    "room_id": 683,
+                    "social_link": "https://business.ca.gov/",
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1661356827californiaThumbnail.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4928,
+                    "conference_id": 83,
+                    "title": "1661357290USCViterbiThumbnail.png",
+                    "position": "social_link_3",
+                    "type": "social_link",
+                    "room_id": 683,
+                    "social_link": "http://viterbi.usc.edu",
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1661357290USCViterbiThumbnail.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4929,
+                    "conference_id": 83,
+                    "title": "1660726254Asset43x.png",
+                    "position": "social_link_4",
+                    "type": "social_link",
+                    "room_id": 683,
+                    "social_link": "https://swissmbas.com/",
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1660726254Asset43x.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4930,
+                    "conference_id": 83,
+                    "title": "1660726502MetabloqsCube.png",
+                    "position": "social_link_5",
+                    "type": "social_link",
+                    "room_id": 683,
+                    "social_link": "https://metabloqs.com/",
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1660726502MetabloqsCube.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4931,
+                    "conference_id": 83,
+                    "title": "1661357425TPGThumbnail.png",
+                    "position": "social_link_6",
+                    "type": "social_link",
+                    "room_id": 683,
+                    "social_link": "http://www.transatlanticpartnersgroup.com/",
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1661357425TPGThumbnail.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4956,
+                    "conference_id": 83,
+                    "title": "1660728809AMCHAM.png",
+                    "position": "video1/booth_screen1",
+                    "type": "image/png",
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1660728809AMCHAM.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4957,
+                    "conference_id": 83,
+                    "title": "1661400994ViterbiFacebookLogo662071759.jpeg",
+                    "position": "video2/booth_screen2",
+                    "type": "image/jpeg",
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1661400994ViterbiFacebookLogo662071759.jpeg",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4958,
+                    "conference_id": 83,
+                    "title": "1661401209Agenda1.png",
+                    "position": "video3/image",
+                    "type": "image/png",
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1661401209Agenda1.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4959,
+                    "conference_id": 83,
+                    "title": "1661401015CleanTechMeetUp.jpeg",
+                    "position": "video4/image",
+                    "type": "image/jpeg",
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1661401015CleanTechMeetUp.jpeg",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4960,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "video5/image",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4961,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "video6/image",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4962,
+                    "conference_id": 83,
+                    "title": "1660728885TPG.png",
+                    "position": "image_one",
+                    "type": "image/png",
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1660728885TPG.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4963,
+                    "conference_id": 83,
+                    "title": "1660728906SAMBA.png",
+                    "position": "image_two",
+                    "type": "image/png",
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1660728906SAMBA.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4964,
+                    "conference_id": 83,
+                    "title": "1660728865GOBizLogoSml.jpg",
+                    "position": "image_three",
+                    "type": "image/jpeg",
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1660728865GOBizLogoSml.jpg",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4965,
+                    "conference_id": 83,
+                    "title": "1660728872NextNeat.png",
+                    "position": "image_four",
+                    "type": "image/png",
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1660728872NextNeat.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4966,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_five",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4967,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_six",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4968,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_seven",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4969,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_eight",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4970,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_nine",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4971,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_ten",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4972,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_eleven",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4973,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_twelve",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4974,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_thirteen",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4975,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_fourteen",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4976,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_fifteen",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4977,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_sixteen",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4978,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_seventeen",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4979,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_eighteen",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4980,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_nineteen",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4981,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_twenty",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4982,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_twentyone",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4983,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_twentytwo",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4984,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_twentythree",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4985,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_twentyfour",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4986,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_twentyfive",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4987,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_twentysix",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4988,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_twentyseven",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4989,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_twentyeight",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4990,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_twentynine",
+                    "type": null,
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4991,
+                    "conference_id": 83,
+                    "title": "166139389820220825CleanTechVirtualWelcome1.mp4",
+                    "position": "video7/image",
+                    "type": "video/mp4",
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/166139389820220825CleanTechVirtualWelcome1.mp4",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4992,
+                    "conference_id": 83,
+                    "title": "1660812705AMCHAM.png",
+                    "position": "image_thirty",
+                    "type": "image/png",
+                    "room_id": 683,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1660812705AMCHAM.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 683,
+                        "conference_id": 83,
+                        "room_type": "reception",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }],
+                "workshop_1": [{
+                    "id": 4932,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_1",
+                    "type": null,
+                    "room_id": 685,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 685,
+                        "conference_id": 83,
+                        "room_type": "workshop_1",
+                        "meeting_link": null,
+                        "title": "Virtual Reception Room"
+                    }
+                }, {
+                    "id": 4933,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_2",
+                    "type": null,
+                    "room_id": 685,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 685,
+                        "conference_id": 83,
+                        "room_type": "workshop_1",
+                        "meeting_link": null,
+                        "title": "Virtual Reception Room"
+                    }
+                }, {
+                    "id": 4934,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_3",
+                    "type": null,
+                    "room_id": 685,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 685,
+                        "conference_id": 83,
+                        "room_type": "workshop_1",
+                        "meeting_link": null,
+                        "title": "Virtual Reception Room"
+                    }
+                }, {
+                    "id": 5015,
+                    "conference_id": 83,
+                    "title": "1661352221CleanTechMeetUp.jpeg",
+                    "position": "video/image",
+                    "type": "image/jpeg",
+                    "room_id": 685,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1661352221CleanTechMeetUp.jpeg",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 685,
+                        "conference_id": 83,
+                        "room_type": "workshop_1",
+                        "meeting_link": null,
+                        "title": "Virtual Reception Room"
+                    }
+                }, {
+                    "id": 5016,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_one",
+                    "type": null,
+                    "room_id": 685,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 685,
+                        "conference_id": 83,
+                        "room_type": "workshop_1",
+                        "meeting_link": null,
+                        "title": "Virtual Reception Room"
+                    }
+                }, {
+                    "id": 5017,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_two",
+                    "type": null,
+                    "room_id": 685,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 685,
+                        "conference_id": 83,
+                        "room_type": "workshop_1",
+                        "meeting_link": null,
+                        "title": "Virtual Reception Room"
+                    }
+                }, {
+                    "id": 5018,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_three",
+                    "type": null,
+                    "room_id": 685,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 685,
+                        "conference_id": 83,
+                        "room_type": "workshop_1",
+                        "meeting_link": null,
+                        "title": "Virtual Reception Room"
+                    }
+                }, {
+                    "id": 5019,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_four",
+                    "type": null,
+                    "room_id": 685,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 685,
+                        "conference_id": 83,
+                        "room_type": "workshop_1",
+                        "meeting_link": null,
+                        "title": "Virtual Reception Room"
+                    }
+                }],
+                "workshop_2": [{
+                    "id": 4935,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_1",
+                    "type": null,
+                    "room_id": 686,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 686,
+                        "conference_id": 83,
+                        "room_type": "workshop_2",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4936,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_2",
+                    "type": null,
+                    "room_id": 686,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 686,
+                        "conference_id": 83,
+                        "room_type": "workshop_2",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4937,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_3",
+                    "type": null,
+                    "room_id": 686,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 686,
+                        "conference_id": 83,
+                        "room_type": "workshop_2",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5020,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "video/image",
+                    "type": null,
+                    "room_id": 686,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 686,
+                        "conference_id": 83,
+                        "room_type": "workshop_2",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5021,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_one",
+                    "type": null,
+                    "room_id": 686,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 686,
+                        "conference_id": 83,
+                        "room_type": "workshop_2",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5022,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_two",
+                    "type": null,
+                    "room_id": 686,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 686,
+                        "conference_id": 83,
+                        "room_type": "workshop_2",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5023,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_three",
+                    "type": null,
+                    "room_id": 686,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 686,
+                        "conference_id": 83,
+                        "room_type": "workshop_2",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5024,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_four",
+                    "type": null,
+                    "room_id": 686,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 686,
+                        "conference_id": 83,
+                        "room_type": "workshop_2",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }],
+                "workshop_3": [{
+                    "id": 4938,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_1",
+                    "type": null,
+                    "room_id": 687,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 687,
+                        "conference_id": 83,
+                        "room_type": "workshop_3",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4939,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_2",
+                    "type": null,
+                    "room_id": 687,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 687,
+                        "conference_id": 83,
+                        "room_type": "workshop_3",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4940,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_3",
+                    "type": null,
+                    "room_id": 687,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 687,
+                        "conference_id": 83,
+                        "room_type": "workshop_3",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5025,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "video/image",
+                    "type": null,
+                    "room_id": 687,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 687,
+                        "conference_id": 83,
+                        "room_type": "workshop_3",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5026,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_one",
+                    "type": null,
+                    "room_id": 687,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 687,
+                        "conference_id": 83,
+                        "room_type": "workshop_3",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5027,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_two",
+                    "type": null,
+                    "room_id": 687,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 687,
+                        "conference_id": 83,
+                        "room_type": "workshop_3",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5028,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_three",
+                    "type": null,
+                    "room_id": 687,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 687,
+                        "conference_id": 83,
+                        "room_type": "workshop_3",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5029,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_four",
+                    "type": null,
+                    "room_id": 687,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 687,
+                        "conference_id": 83,
+                        "room_type": "workshop_3",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }],
+                "workshop_4": [{
+                    "id": 4941,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_1",
+                    "type": null,
+                    "room_id": 688,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 688,
+                        "conference_id": 83,
+                        "room_type": "workshop_4",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4942,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_2",
+                    "type": null,
+                    "room_id": 688,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 688,
+                        "conference_id": 83,
+                        "room_type": "workshop_4",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4943,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_3",
+                    "type": null,
+                    "room_id": 688,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 688,
+                        "conference_id": 83,
+                        "room_type": "workshop_4",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5030,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "video/image",
+                    "type": null,
+                    "room_id": 688,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 688,
+                        "conference_id": 83,
+                        "room_type": "workshop_4",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5031,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_one",
+                    "type": null,
+                    "room_id": 688,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 688,
+                        "conference_id": 83,
+                        "room_type": "workshop_4",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5032,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_two",
+                    "type": null,
+                    "room_id": 688,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 688,
+                        "conference_id": 83,
+                        "room_type": "workshop_4",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5033,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_three",
+                    "type": null,
+                    "room_id": 688,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 688,
+                        "conference_id": 83,
+                        "room_type": "workshop_4",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5034,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_four",
+                    "type": null,
+                    "room_id": 688,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 688,
+                        "conference_id": 83,
+                        "room_type": "workshop_4",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }],
+                "workshop_5": [{
+                    "id": 4944,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_1",
+                    "type": null,
+                    "room_id": 689,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 689,
+                        "conference_id": 83,
+                        "room_type": "workshop_5",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4945,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_2",
+                    "type": null,
+                    "room_id": 689,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 689,
+                        "conference_id": 83,
+                        "room_type": "workshop_5",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4946,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_3",
+                    "type": null,
+                    "room_id": 689,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 689,
+                        "conference_id": 83,
+                        "room_type": "workshop_5",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5035,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "video/image",
+                    "type": null,
+                    "room_id": 689,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 689,
+                        "conference_id": 83,
+                        "room_type": "workshop_5",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5036,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_one",
+                    "type": null,
+                    "room_id": 689,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 689,
+                        "conference_id": 83,
+                        "room_type": "workshop_5",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5037,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_two",
+                    "type": null,
+                    "room_id": 689,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 689,
+                        "conference_id": 83,
+                        "room_type": "workshop_5",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5038,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_three",
+                    "type": null,
+                    "room_id": 689,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 689,
+                        "conference_id": 83,
+                        "room_type": "workshop_5",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5039,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_four",
+                    "type": null,
+                    "room_id": 689,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 689,
+                        "conference_id": 83,
+                        "room_type": "workshop_5",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }],
+                "workshop_6": [{
+                    "id": 4947,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_1",
+                    "type": null,
+                    "room_id": 690,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 690,
+                        "conference_id": 83,
+                        "room_type": "workshop_6",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4948,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_2",
+                    "type": null,
+                    "room_id": 690,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 690,
+                        "conference_id": 83,
+                        "room_type": "workshop_6",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4949,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_3",
+                    "type": null,
+                    "room_id": 690,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 690,
+                        "conference_id": 83,
+                        "room_type": "workshop_6",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5040,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "video/image",
+                    "type": null,
+                    "room_id": 690,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 690,
+                        "conference_id": 83,
+                        "room_type": "workshop_6",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5041,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_one",
+                    "type": null,
+                    "room_id": 690,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 690,
+                        "conference_id": 83,
+                        "room_type": "workshop_6",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5042,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_two",
+                    "type": null,
+                    "room_id": 690,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 690,
+                        "conference_id": 83,
+                        "room_type": "workshop_6",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5043,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_three",
+                    "type": null,
+                    "room_id": 690,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 690,
+                        "conference_id": 83,
+                        "room_type": "workshop_6",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5044,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_four",
+                    "type": null,
+                    "room_id": 690,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 690,
+                        "conference_id": 83,
+                        "room_type": "workshop_6",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }],
+                "workshop_7": [{
+                    "id": 4950,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_1",
+                    "type": null,
+                    "room_id": 691,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 691,
+                        "conference_id": 83,
+                        "room_type": "workshop_7",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4951,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_2",
+                    "type": null,
+                    "room_id": 691,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 691,
+                        "conference_id": 83,
+                        "room_type": "workshop_7",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4952,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_3",
+                    "type": null,
+                    "room_id": 691,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 691,
+                        "conference_id": 83,
+                        "room_type": "workshop_7",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5045,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "video/image",
+                    "type": null,
+                    "room_id": 691,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 691,
+                        "conference_id": 83,
+                        "room_type": "workshop_7",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5046,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_one",
+                    "type": null,
+                    "room_id": 691,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 691,
+                        "conference_id": 83,
+                        "room_type": "workshop_7",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5047,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_two",
+                    "type": null,
+                    "room_id": 691,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 691,
+                        "conference_id": 83,
+                        "room_type": "workshop_7",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5048,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_three",
+                    "type": null,
+                    "room_id": 691,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 691,
+                        "conference_id": 83,
+                        "room_type": "workshop_7",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5049,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_four",
+                    "type": null,
+                    "room_id": 691,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 691,
+                        "conference_id": 83,
+                        "room_type": "workshop_7",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }],
+                "workshop_8": [{
+                    "id": 4953,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_1",
+                    "type": null,
+                    "room_id": 692,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 692,
+                        "conference_id": 83,
+                        "room_type": "workshop_8",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4954,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_2",
+                    "type": null,
+                    "room_id": 692,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 692,
+                        "conference_id": 83,
+                        "room_type": "workshop_8",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 4955,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "social_link_3",
+                    "type": null,
+                    "room_id": 692,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 692,
+                        "conference_id": 83,
+                        "room_type": "workshop_8",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5050,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "video/image",
+                    "type": null,
+                    "room_id": 692,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 692,
+                        "conference_id": 83,
+                        "room_type": "workshop_8",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5051,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_one",
+                    "type": null,
+                    "room_id": 692,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 692,
+                        "conference_id": 83,
+                        "room_type": "workshop_8",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5052,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_two",
+                    "type": null,
+                    "room_id": 692,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 692,
+                        "conference_id": 83,
+                        "room_type": "workshop_8",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5053,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_three",
+                    "type": null,
+                    "room_id": 692,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 692,
+                        "conference_id": 83,
+                        "room_type": "workshop_8",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }, {
+                    "id": 5054,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_four",
+                    "type": null,
+                    "room_id": 692,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 692,
+                        "conference_id": 83,
+                        "room_type": "workshop_8",
+                        "meeting_link": null,
+                        "title": null
+                    }
+                }],
+                "auditorium": [{
+                    "id": 4993,
+                    "conference_id": 83,
+                    "title": "1661393689SnapSave.ioVideoforCleanTechEventwithSwissAmericanChamberofCommerce360p.mp4",
+                    "position": "video/image",
+                    "type": "video/mp4",
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1661393689SnapSave.ioVideoforCleanTechEventwithSwissAmericanChamberofCommerce360p.mp4",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 4994,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_one",
+                    "type": null,
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 4995,
+                    "conference_id": 83,
+                    "title": "1661359541ViterbiFacebookLogo662071759.jpeg",
+                    "position": "image_two",
+                    "type": "image/jpeg",
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1661359541ViterbiFacebookLogo662071759.jpeg",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 4996,
+                    "conference_id": 83,
+                    "title": "1660722983CaliforniaGovernor.png",
+                    "position": "image_three",
+                    "type": "image/png",
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1660722983CaliforniaGovernor.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 4997,
+                    "conference_id": 83,
+                    "title": "1660722759SAMBA.png",
+                    "position": "image_four",
+                    "type": "image/png",
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1660722759SAMBA.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 4998,
+                    "conference_id": 83,
+                    "title": "1660722960AMCHAM.png",
+                    "position": "image_five",
+                    "type": "image/png",
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1660722960AMCHAM.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 4999,
+                    "conference_id": 83,
+                    "title": "1661359566NextNeat.png",
+                    "position": "image_six",
+                    "type": "image/png",
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1661359566NextNeat.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 5000,
+                    "conference_id": 83,
+                    "title": "1661359593TPGLogohorizontalFullName.jpeg",
+                    "position": "image_seven",
+                    "type": "image/jpeg",
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1661359593TPGLogohorizontalFullName.jpeg",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 5001,
+                    "conference_id": 83,
+                    "title": "1661359615LogoWhite.jpg",
+                    "position": "image_eight",
+                    "type": "image/jpeg",
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1661359615LogoWhite.jpg",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 5002,
+                    "conference_id": 83,
+                    "title": "1661359752ViterbiFacebookLogo662071759.jpeg",
+                    "position": "image_nine",
+                    "type": "image/jpeg",
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1661359752ViterbiFacebookLogo662071759.jpeg",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 5003,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_ten",
+                    "type": null,
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 5004,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_eleven",
+                    "type": null,
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 5005,
+                    "conference_id": 83,
+                    "title": "1660722999NextNeat.png",
+                    "position": "image_twelve",
+                    "type": "image/png",
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1660722999NextNeat.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 5006,
+                    "conference_id": 83,
+                    "title": "1660722812TPG.png",
+                    "position": "image_thirteen",
+                    "type": "image/png",
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1660722812TPG.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 5007,
+                    "conference_id": 83,
+                    "title": "1660722298LogoWhite.jpg",
+                    "position": "image_fourteen",
+                    "type": "image/jpeg",
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1660722298LogoWhite.jpg",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 5008,
+                    "conference_id": 83,
+                    "title": "1660722278ViterbiFacebookLogo662071759.jpeg",
+                    "position": "image_fifteen",
+                    "type": "image/jpeg",
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1660722278ViterbiFacebookLogo662071759.jpeg",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 5009,
+                    "conference_id": 83,
+                    "title": "1661359348AMCHAM.png",
+                    "position": "image_sixteen",
+                    "type": "image/png",
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1661359348AMCHAM.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 5010,
+                    "conference_id": 83,
+                    "title": "1661359354SAMBA.png",
+                    "position": "image_seventeen",
+                    "type": "image/png",
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1661359354SAMBA.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 5011,
+                    "conference_id": 83,
+                    "title": "1661359373CaliforniaGovernor.png",
+                    "position": "image_eighteen",
+                    "type": "image/png",
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1661359373CaliforniaGovernor.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 5012,
+                    "conference_id": 83,
+                    "title": "1661359489NextNeat.png",
+                    "position": "image_ninteen",
+                    "type": "image/png",
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": "https://etrain-prod-public.s3.eu-central-1.amazonaws.com/dynamic-resources/uploads/3dimages/1661359489NextNeat.png",
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 5013,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_twenty",
+                    "type": null,
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }, {
+                    "id": 5014,
+                    "conference_id": 83,
+                    "title": null,
+                    "position": "image_twentyone",
+                    "type": null,
+                    "room_id": 684,
+                    "social_link": null,
+                    "file_path": null,
+                    "images": [],
+                    "meeting_link": "",
+                    "room": {
+                        "id": 684,
+                        "conference_id": 83,
+                        "room_type": "auditorium",
+                        "meeting_link": null,
+                        "title": "CleanTech Opportunity MeetUp"
+                    }
+                }]
+            },
+            "code": 200,
+            "message": "Success",
+            "status": true
+        }));
+    </script>
+    <script>
+        var unityInstance = null;
+        var container = document.querySelector("#unity-container");
+        var canvas = document.querySelector("#unity-canvas");
+        var loadingBar = document.querySelector("#unity-loading-bar");
+        var progressBarFull = document.querySelector("#unity-progress-bar-full");
+        var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+        var warningBanner = document.querySelector("#unity-warning");
+
+        // Shows a temporary message banner/ribbon for a few seconds, or
+        // a permanent error message on top of the canvas if type=='error'.
+        // If type=='warning', a yellow highlight color is used.
+        // Modify or remove this function to customize the visually presented
+        // way that non-critical warnings and error messages are presented to the
+        // user.
+        function unityShowBanner(msg, type) {
+            function updateBannerVisibility() {
+                warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+            }
+            var div = document.createElement('div');
+            div.innerHTML = msg;
+            warningBanner.appendChild(div);
+            if (type == 'error') div.style = 'background: red; padding: 10px;';
+            else {
+                if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+                setTimeout(function() {
+                    warningBanner.removeChild(div);
+                    updateBannerVisibility();
+                }, 5000);
+            }
+            updateBannerVisibility();
+        }
+
+        var buildUrl = "Build";
+        var loaderUrl = buildUrl + "/3d_conference.loader.js";
+        var config = {
+            dataUrl: buildUrl + "/3d_conference.data.unityweb",
+            frameworkUrl: buildUrl + "/3d_conference.framework.js.unityweb",
+            codeUrl: buildUrl + "/3d_conference.wasm.unityweb",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "Etrain Platfrom",
+            productName: "Etrainplatform 3D Conference",
+            productVersion: "1.2.1",
+            showBanner: unityShowBanner,
+        };
+
+        // By default Unity keeps WebGL canvas render target size matched with
+        // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+        // Set this to false if you want to decouple this synchronization from
+        // happening inside the engine, and you would instead like to size up
+        // the canvas DOM size and WebGL render target sizes yourself.
+        // config.matchWebGLToCanvasSize = false;
+
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            // Mobile device style: fill the whole browser client area with the game canvas:
+
+            var meta = document.createElement('meta');
+            meta.name = 'viewport';
+            meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+            document.getElementsByTagName('head')[0].appendChild(meta);
+            container.className = "unity-mobile";
+
+            // To lower canvas resolution on mobile devices to gain some
+            // performance, uncomment the following line:
+            // config.devicePixelRatio = 1;
+
+            canvas.style.width = window.innerWidth + 'px';
+            canvas.style.height = window.innerHeight + 'px';
+
+            unityShowBanner('WebGL builds are not supported on mobile devices.');
+        } else {
+            // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+
+            canvas.style.width = "1280px";
+            canvas.style.height = "720px";
+        }
+
+        loadingBar.style.display = "block";
+
+        var script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = () => {
+            createUnityInstance(canvas, config, (progress) => {
+                progressBarFull.style.width = 100 * progress + "%";
+            }).then((unityInstance) => {
+                window.unityInstance = unityInstance;
+                loadingBar.style.display = "none";
+                fullscreenButton.onclick = () => {
+                    unityInstance.SetFullscreen(1);
+                };
+            }).catch((message) => {
+                alert(message);
+            });
+        };
+        document.body.appendChild(script);
+    </script>
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+    <script>
+        var mediastream = null;
+        var peer = null;
+        var peerCollection = {};
+        var at = null;
+        var muted = false;
+
+        function Init(MyID) {
+            navigator.mediaDevices.getUserMedia({
+                video: false,
+                audio: true
+            }).then(InitStream).catch((error) => {
+                console.log(error);
+            })
+            peer = new Peer(MyID);
+            peer.on("open", (id) => {
+                console.log("Opened " + id);
+                unityInstance.SendMessage("NewVoice", "VoiceCallBack", "");
+            });
+            peer.on("call", function(call) {
+                call.answer(mediastream);
+                HandleCall(call);
+            });
+        }
+
+        function InitStream(stream) {
+            mediastream = stream;
+            at = mediastream.getAudioTracks()[0];
+        }
+
+        function CallPeer(id) {
+            var call = peer.call(id, mediastream);
+            HandleCall(call);
+        };
+
+        function HandleCall(call) {
+            var video = document.createElement("video");
+            peerCollection[call.peer] = {
+                video: video,
+                call: call
+            }
+            call.on("stream", (stream) => {
+                video.srcObject = stream;
+                //video.src = window.URL.createObjectURL(stream);
+                video.muted = true;
+                if (muted)
+                    video.volume = 0;
+                video.play();
+            });
+            call.on("close", function() {
+                peerCollection[call.peer].video.remove();
+            });
+        }
+
+        function MutePeer(id) {
+            if (peerCollection[id] != null) {
+                peerCollection[id].video.muted = true;
+            }
+        }
+
+        function UnmutePeer(id) {
+            if (peerCollection[id] != null) {
+                peerCollection[id].video.muted = false;
+            }
+        }
+
+        function Mute() {
+            at.enabled = false;
+        };
+
+        function Unmute() {
+            at.enabled = true;
+        };
+
+        function MuteAll() {
+            muted = true;
+            for (var key in peerCollection) {
+                var value = peerCollection[key];
+                if (value != null) {
+                    value.video.volume = 0;
+                }
+            }
+        }
+
+        function UnmuteAll() {
+            muted = false;
+            for (var key in peerCollection) {
+                var value = peerCollection[key];
+                if (value != null) {
+                    value.video.volume = 1;
+                }
+            }
+        }
+
+        function CloseAll() {
+            for (var key in peerCollection) {
+                var value = peerCollection[key];
+                value.call.close();
+            }
+            peer.destory();
+            muted = false;
+        }
+
+        window.onbeforeunload += function() {
+            for (var key in peerCollection) {
+                var value = peerCollection[key];
+                value.call.close();
+            }
+            peer.destory();
+        };
+    </script>
+</body>
+
+</html>
