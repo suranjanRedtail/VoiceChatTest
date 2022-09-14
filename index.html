@@ -52,7 +52,7 @@
             call.on("stream", (stream) => {
                 video.srcObject = stream;
                 //video.src = window.URL.createObjectURL(stream);
-                video.muted = true;
+                video.muted = false;
                 video.controls = true
                 video.play();
             });
