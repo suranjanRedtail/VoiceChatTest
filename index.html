@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+    <script>
+        var mediastream = null;
+        var peer = null;
+        var peerCollection = {};
+        var at = null;
+
+        function Init(MyID) {
+            navigator.mediaDevices.getUserMedia({
+                video: false,
+                audio: true
+            }).then(InitStream).catch((error) => {
+                console.log(error);
+            })
+            peer = new Peer(MyID);
+            peer.on("open", (id) => {
+                console.log("Opened " + id);
+            });
+            peer.on("call", function(call) {
+                call.answer(mediastream);
+                HandleCall(call);
+            });
+        }
+
+        function InitStream(stream) {
+            mediastream = stream;
+            at = mediastream.getAudioTracks()[0];
+        }
+
+        function CallPeer(id) {
+            var call = peer.call(id, mediastream);
+            HandleCall(call);
+        };
+
+        function HandleCall(call) {
+            var video = document.createElement("video");
+            peerCollection[call.peer] = {
+                video: video,
+                call: call
+            }
+            call.on("stream", (stream) => {
+                video.srcObject = stream;
+                //video.src = window.URL.createObjectURL(stream);
+                video.muted = true;
+                video.controls = true
+                video.play();
+            });
+            call.on("close", function() {
+                peerCollection[call.peer].video.remove();
+            });
+        }
+
+        function MutePeer(id) {
+            if (peerCollection[id] != null) {
+                peerCollection[id].video.muted = true;
+            }
+        }
+
+        function UnmutePeer(id) {
+            if (peerCollection[id] != null) {
+                peerCollection[id].video.muted = false;
+            }
+        }
+
+        function Mute() {};
+
+        function Unmute() {};
+
+        window.onbeforeunload += function() {
+            for (var key in peerCollection) {
+                var value = peerCollection[key];
+                value.call.close();
+            }
+            peer.destory();
+        };
+
+        function ConnectBtn() {
+            Init(document.getElementById('input').value);
+        }
+
+        function CallBtn() {
+            CallPeer(document.getElementById('call').value)
+        }
+    </script>
+
+    <input type="text" id="input">
+    <button onclick="ConnectBtn()">connect</button>
+    <input type="text" id="call">
+    <button onclick="CallBtn()">Call</button>
+    <br><button onclick="Mute()">Mute</button> <button onclick="Unmute()">Unmute</button>
+
+</body>
+
+</html>

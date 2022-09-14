@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+
+<body>
+
+    <script src="./simplepeer.min.js"></script>
+    <script>
+        var p = null;
+        var mymedia = null;
+        var peerCollection = {};
+        var signals = [];
+
+        function InitMyPeer() {
+            navigator.mediaDevices.getUserMedia({
+                video: true,
+                audio: true
+            }).then(InitWithStream).catch((error) => {
+                console.log(error);
+            })
+        }
+
+        function InitWithStream(stream) {
+            p = new SimplePeer({
+                initiator: true,
+                stream: stream
+            });
+
+            p.on("signal", data => {
+                var text = JSON.stringify(data);
+                console.log(data);
+                signals.push(data);
+                //unityInstance.SendMessage("OnConnect", p);
+            });
+        }
+
+        function AddPeer(id, data) {
+            var newpeer = new SimplePeer();
+            (JSON.parse(data)).forEach(e => {
+                newpeer.signal(e);
+            });
+            newpeer.on("stream", (stream) => {
+                var video = document.createElement("video");
+                peerCollection[id] = {
+                    video: video,
+                    peer: newpeer
+                }
+                document.body.appendChild(video);
+                video.srcObject = stream;
+                //video.src = window.URL.createObjectURL(stream);
+                video.muted = true;
+                video.play();
+            })
+
+
+        };
+
+        function MutePeer(id) {
+            if (peerCollection[id] != null) {
+                peerCollection[id].video.muted = true;
+            }
+        }
+
+        function UnmutePeer(id) {
+            if (peerCollection[id] != null) {
+                peerCollection[id].video.muted = false;
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
