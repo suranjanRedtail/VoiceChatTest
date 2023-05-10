@@ -19,7 +19,7 @@
 
         function Init(MyID) {
             navigator.mediaDevices.getUserMedia({
-                video: false,
+                video: true,
                 audio: true
             }).then(InitStream).catch((error) => {
                 console.log(error);
@@ -28,7 +28,7 @@
             peer.on("open", (id) => {
                 console.log("Opened " + id);
             });
-            peer.on("call", function(call) {
+            peer.on("call", (call)=> {
                 call.answer(mediastream);
                 HandleCall(call);
             });
@@ -45,22 +45,24 @@
         };
 
         function HandleCall(call) {
-            var video = document.createElement("video");
+            var video = document.createElement("video");  
+            document.body.appendChild(video);
             peerCollection[call.peer] = {
                 video: video,
                 call: call
-            }
+            }         
             call.on("stream", (stream) => {
-                video.srcObject = stream;
-                //video.src = window.URL.createObjectURL(stream);
+                video.srcObject = stream;  
+                video.play();              
                 video.muted = true;
                 if (muted)
-                    video.volume = 0;
-                video.play();
+                    video.volume = 0;                
             });
-            call.on("close", function() {
+            call.on("close", ()=> {
+                console.log("Call closed");
                 peerCollection[call.peer].video.remove();
             });
+            
         }
 
         function MutePeer(id) {
